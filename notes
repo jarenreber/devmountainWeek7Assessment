@@ -1,0 +1,26 @@
+Results for the extraLargeArray
+insert 963.494958 ms
+append 19.87864 ms
+
+
+Results for the largeArray
+insert 9.310484 ms
+append 913.019 μs
+
+
+Results for the mediumArray
+insert 313.684 μs
+append 237.532 μs
+
+
+Results for the smallArray
+insert 48.91 μs
+append 114.605 μs
+
+
+Results for the tinyArray
+insert 173.156 μs
+append 131.178 μs
+
+
+After reading over the results and adding  those results to a graph in google sheets it is obvious that .unshift gets exponentially worse with the more amount of data that is passed in. where as appending it onto the end does a much better job and is only linear. This makes sense as the bigger the data amount for unshift or inserting into the beginning of the array means a lot of moving information whereas just adding to the end is fairly linear and is a lot less work. The amount of time for insert to take in the extra large array was much longer than adding to the end. It is interesting to note that on small data inputs there was hardly a difference between unshift and push.
